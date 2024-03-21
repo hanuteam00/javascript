@@ -6,6 +6,7 @@
     <title>Advanced_2_Async</title>
 </head>
 <script>
+    //khai bao request dung ham XMLHttpRequest() JS
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -17,7 +18,9 @@
         }
         else console.log('>>> check res status:', request.status)
     };
-    request.open("GET", "https://jsonplaceholder.typicode.com/todosss", true);
+    //open(method, url, async, user, password)
+    //async, user, password: optional
+    request.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
     request.send();
 
 </script>
